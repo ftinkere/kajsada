@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AddWordController;
+use App\Http\Controllers\KajsadaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [KajsadaController::class, 'show']);
+Route::post('/add', [AddWordController::class, 'show']);
